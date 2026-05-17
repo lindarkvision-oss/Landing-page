@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '898415699302101');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=898415699302101&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+ </head>
+<body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#050816;
+  color:#ffffff;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  width:100%;
+  max-width:1280px;
+  margin:auto;
+  padding:0 24px;
+}
+
+/* BACKGROUND */
+
+.page-wrap{
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(14,165,233,0.12), transparent 30%),
+    linear-gradient(180deg,#050816 0%,#081021 45%,#050816 100%);
+}
+
+/* HERO */
+
+.hero{
+  padding:90px 0 70px;
+  position:relative;
+  overflow:hidden;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  color:#dbeafe;
+  font-size:0.92rem;
+  font-weight:600;
+  margin-bottom:28px;
+  backdrop-filter:blur(12px);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero-content h1{
+  font-size:clamp(2.7rem,6vw,5.2rem);
+  line-height:1.02;
+  font-weight:900;
+  letter-spacing:-0.05em;
+  margin-bottom:24px;
+}
+
+.gradient-text{
+  background:linear-gradient(90deg,#60a5fa,#22d3ee);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-sub{
+  font-size:1.18rem;
+  color:#cbd5e1;
+  max-width:700px;
+  margin-bottom:26px;
+}
+
+.hero-highlight{
+  font-size:1.15rem;
+  font-weight:700;
+  color:#ffffff;
+  margin-bottom:34px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-bottom:35px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:18px 32px;
+  border-radius:18px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:1rem;
+  transition:all .25s ease;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%);
+  color:white;
+  box-shadow:0 20px 40px rgba(37,99,235,0.35);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 25px 50px rgba(37,99,235,0.45);
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  color:#fff;
+  backdrop-filter:blur(10px);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+.trust-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.trust-item{
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.06);
+  color:#dbeafe;
+  font-size:0.92rem;
+  font-weight:600;
+}
+
+/* HERO CARD */
+
+.hero-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:32px;
+  padding:28px;
+  backdrop-filter:blur(18px);
+  box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.metric-card{
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,0.05);
+  border-radius:24px;
+  padding:22px;
+  margin-bottom:18px;
+}
+
+.metric-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+.metric-label{
+  color:#94a3b8;
+  font-size:0.9rem;
+}
+
+.metric-value{
+  font-size:2rem;
+  font-weight:800;
+  letter-spacing:-0.03em;
+}
+
+.metric-red{
+  color:#fb7185;
+}
+
+.metric-green{
+  color:#34d399;
+}
+
+.metric-warning{
+  background:rgba(251,113,133,0.08);
+  border:1px solid rgba(251,113,133,0.15);
+  color:#fecdd3;
+  padding:14px;
+  border-radius:18px;
+  font-size:0.95rem;
+  font-weight:600;
+}
+
+/* CARROUSEL AUTOMATIQUE - MÊME STYLE QUE LES AUTRES IMAGES */
+.carousel-container {
+    position: relative;
+    width: 356px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 356px;
+    flex-shrink: 0;
+}
+
+.carousel-slide .glow-image {
+    width: 356px;
+    height: px;
+    display: block;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 8px 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: linear-gradient(135deg, #60a5fa, #22d3ee);
+    width: 24px;
+    border-radius: 10px;
+}
+
+.dot:hover {
+    background: rgba(96, 165, 250, 0.7);
+}
+
+/* Responsive : garder les proportions */
+@media(max-width:640px) {
+    .carousel-container {
+        width: 280px;
+    }
+    .carousel-slide {
+        min-width: 280px;
+    }
+    .carousel-slide .glow-image {
+        width: 280px;
+        height: 278px;
+    }
+}
+
+@media(max-width:380px) {
+    .carousel-container {
+        width: 260px;
+    }
+    .carousel-slide {
+        min-width: 260px;
+    }
+    .carousel-slide .glow-image {
+        width: 260px;
+        height: 258px;
+    }
+}
+/* SECTIONS */
+
+section{
+  padding:85px 0;
+}
+
+.section-head{
+  text-align:center;
+  max-width:850px;
+  margin:auto auto 60px;
+}
+
+.section-head h2{
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:-0.04em;
+  margin-bottom:18px;
+}
+
+.section-head p{
+  color:#94a3b8;
+  font-size:1.08rem;
+}
+
+/* PROBLEMS */
+
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.problem-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:24px;
+  padding:28px;
+}
+
+.problem-icon{
+  font-size:2rem;
+  margin-bottom:18px;
+}
+
+.problem-card h3{
+  font-size:1.15rem;
+  margin-bottom:10px;
+}
+
+.problem-card p{
+  color:#94a3b8;
+}
+
+/* QUOTE */
+
+.quote{
+  background:linear-gradient(135deg,#172554 0%,#0f172a 100%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:32px;
+  padding:42px;
+  text-align:center;
+  max-width:950px;
+  margin:60px auto 0;
+}
+
+.quote h3{
+  font-size:clamp(1.8rem,4vw,3rem);
+  line-height:1.2;
+  margin-bottom:18px;
+}
+
+.quote p{
+  color:#cbd5e1;
+  font-size:1.08rem;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+
+.feature-card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:28px;
+  padding:30px;
+  transition:.25s ease;
+}
+
+.feature-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(96,165,250,0.5);
+}
+
+.feature-icon{
+  width:62px;
+  height:62px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.6rem;
+  margin-bottom:20px;
+}
+
+.feature-card h3{
+  font-size:1.25rem;
+  margin-bottom:12px;
+}
+
+.feature-card p{
+  color:#94a3b8;
+}
+
+/* AFRICA */
+
+.africa-box{
+  background:linear-gradient(135deg,#0f172a 0%,#111c35 100%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:36px;
+  padding:50px;
+}
+
+.africa-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
+.africa-tag{
+  padding:12px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  font-weight:600;
+  color:#dbeafe;
+}
+
+/* BEFORE AFTER */
+
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.compare-card{
+  border-radius:32px;
+  padding:36px;
+}
+
+.before{
+  background:rgba(127,29,29,0.18);
+  border:1px solid rgba(248,113,113,0.18);
+}
+
+.after{
+  background:rgba(6,95,70,0.18);
+  border:1px solid rgba(52,211,153,0.18);
+}
+
+.compare-card h3{
+  font-size:1.8rem;
+  margin-bottom:24px;
+}
+
+.compare-list{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.compare-item{
+  display:flex;
+  gap:12px;
+  color:#e2e8f0;
+}
+
+/* FINAL CTA */
+
+.cta{
+  padding-bottom:110px;
+}
+
+.cta-box{
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,0.35), transparent 30%),
+    linear-gradient(135deg,#0f172a 0%,#081226 100%);
+  border-radius:42px;
+  padding:70px 40px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.cta-box h2{
+  font-size:clamp(2.2rem,5vw,4rem);
+  margin-bottom:20px;
+  line-height:1.05;
+  font-weight:900;
+}
+
+.cta-box p{
+  font-size:1.15rem;
+  color:#cbd5e1;
+  max-width:700px;
+  margin:auto auto 34px;
+}
+
+.footer-note{
+  text-align:center;
+  color:#64748b;
+  margin-top:24px;
+  font-size:0.92rem;
+}
+
+/* IMAGE GLOW - EFFET LUEUR SUBTILE */
+.glow-image {
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: 
+        0 0 0 0 rgba(96, 165, 250, 0),
+        0 20px 35px -15px rgba(0, 0, 0, 0.4);
+}
+
+.glow-image:hover {
+    transform: scale(1.01);
+    box-shadow: 
+        0 0 20px 2px rgba(96, 165, 250, 0.25),
+        0 0 35px 5px rgba(34, 211, 238, 0.15),
+        0 25px 40px -18px rgba(0, 0, 0, 0.5);
+}
+
+/* Version sans hover - lueur permanente très subtile */
+.glow-image {
+    animation: softGlow 3s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+    0% {
+        box-shadow: 
+            0 0 0px 0px rgba(96, 165, 250, 0.08),
+            0 0 0px 0px rgba(34, 211, 238, 0.04),
+            0 20px 35px -15px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 12px 1px rgba(96, 165, 250, 0.18),
+            0 0 25px 3px rgba(34, 211, 238, 0.08),
+            0 25px 40px -15px rgba(0, 0, 0, 0.45);
+    }
+    100% {
+        box-shadow: 
+            0 0 0px 0px rgba(96, 165, 250, 0.08),
+            0 0 0px 0px rgba(34, 211, 238, 0.04),
+            0 20px 35px -15px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Version mobile : lueur encore plus discrète */
+@media(max-width:640px) {
+    .glow-image {
+        border-radius: 18px;
+    }
+    .glow-image {
+        animation: softGlowMobile 3s ease-in-out infinite;
+    }
+    @keyframes softGlowMobile {
+        0%, 100% {
+            box-shadow: 0 0 0px 0px rgba(96, 165, 250, 0.05);
+        }
+        50% {
+            box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12);
+        }
+    }
+}
+/* MOBILE */
+
+@media(max-width:980px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .compare{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:60px;
+  }
+
+}
+
+@media(max-width:640px){
+
+  .container{
+    padding:0 18px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-card{
+    padding:20px;
+  }
+
+  .cta-box{
+    padding:50px 24px;
+  }
+
+  .africa-box{
+    padding:30px;
+  }
+
+}
+</style>
+
+<div class="page-wrap">
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-grid">
+
+<div class="hero-content">
+
+<div class="badge">
+🌍 Pensé pour l’Afrique • Optimisé Cash on Delivery
+</div>
+
+<h1>
+Vous faites des ventes…<br>
+<span class="gradient-text">mais êtes-vous vraiment rentable ?</span>
+</h1>
+
+<p class="hero-sub">
+Noki vous montre enfin la vérité derrière vos campagnes COD :
+CPA réel, bénéfice net, taux de livraison, pertes cachées, retours, logistique et cashflow.
+</p>
+
+<p class="hero-highlight">
+En quelques secondes, vous savez si votre campagne vous enrichit… ou vous détruit.
+</p>
+<div class="hero-highlight" style="display: flex; justify-content: center; margin: 0 auto;">
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <div class="carousel-slide">
+                <img src="img1.jpeg" alt="Noki Metrics 1" class="glow-image">
+            </div>
+            <div class="carousel-slide">
+                <img src="img2.jpeg" alt="Noki Metrics 2" class="glow-image">
+            </div>
+            <div class="carousel-slide">
+                <img src="img3.jpeg" alt="Noki Metrics 3" class="glow-image">
+            </div>
+            <div class="carousel-slide">
+                <img src="img4.jpeg" alt="Noki Metrics 4" class="glow-image">
+            </div>
+            <div class="carousel-slide">
+                <img src="img5.jpeg" alt="Noki Metrics 5" class="glow-image">
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</div>
+
+<div class="hero-buttons">
+
+<a class="btn btn-primary" href="https://dmomxsez.mychariow.shop/nokimetric/checkout">
+ Commencer maintenant
+</a>
+
+<a class="btn btn-secondary" href="#features">
+ Découvrir Noki
+</a>
+
+</div>
+
+<div class="trust-row">
+
+<div class="trust-item">
+ Aucune compétence technique requise
+</div>
+
+<div class="trust-item">
+ Pensé pour le COD africain
+</div>
+
+<div class="trust-item">
+📱 Utilisable depuis téléphone
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<div class="metric-card">
+
+<div class="metric-top">
+<div class="metric-label">CPA Facebook</div>
+<div>📈</div>
+</div>
+
+<div class="metric-value">
+4.2$
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-top">
+<div class="metric-label">CPA réel après livraison</div>
+<div>⚠️</div>
+</div>
+
+<div class="metric-value metric-red">
+13.8$
+</div>
+
+</div>
+
+<div class="metric-card">
+
+<div class="metric-top">
+<div class="metric-label">Profit réel détecté par Noki</div>
+<div>💰</div>
+</div>
+
+<div class="metric-value metric-green">
++2 140$
+</div>
+
+</div>
+
+<div class="metric-warning">
+ Sans suivi précis COD, une campagne rentable peut détruire votre trésorerie.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROBLEM -->
+
+<section>
+
+<div class="section-head">
+
+<h2>
+Le Cash on Delivery tue les marges… silencieusement.
+</h2>
+
+<p>
+Beaucoup d’e-commerçants africains pensent être rentables parce que les commandes entrent. Mais derrière, les pertes invisibles détruisent le bénéfice.
+</p>
+
+</div>
+
+<div class="problem-grid">
+
+<div class="problem-card">
+<div class="problem-icon">📦</div>
+<h3>Colis non livrés</h3>
+<p>Chaque retour mange votre budget publicitaire sans que vous le réalisiez.</p>
+</div>
+
+<div class="problem-card">
+<div class="problem-icon">📵</div>
+<h3>Clients injoignables</h3>
+<p>Les faux leads et confirmations ratées détruisent votre rentabilité.</p>
+</div>
+
+<div class="problem-card">
+<div class="problem-icon">💸</div>
+<h3>Fausse rentabilité</h3>
+<p>Le chiffre d’affaires monte… mais le cash disparaît.</p>
+</div>
+
+<div class="problem-card">
+<div class="problem-icon">📉</div>
+<h3>Scale dangereux</h3>
+<p>Vous augmentez les budgets sans connaître le vrai profit.</p>
+</div>
+
+</div>
+
+<div class="quote">
+
+<h3>
+“J’ai fait 300 commandes… mais je n’ai presque rien gardé.”
+</h3>
+
+<p>
+C’est le problème numéro 1 du e-commerce Cash on Delivery en Afrique.
+Noki a été créé pour résoudre exactement ça.
+</p>
+</div>
+
+<p class="hero-highlight">
+    <img src="img1.jpeg" alt="Noki Metrics" width="356" height="353" class="glow-image" style="display: block; margin-left: auto; margin-right: auto; width: auto; max-width: 100%; height: auto;">
+</p>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
+<div class="section-head">
+
+<h2>
+Noki transforme vos chiffres en décisions rentables.
+</h2>
+
+<p>
+Quelques chiffres entrés. Des décisions claires immédiatement.
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature-card">
+<div class="feature-icon">📊</div>
+<h3>CPA réel par colis livré</h3>
+<p>Arrêtez de croire votre CPA Facebook. Noki calcule le vrai coût de chaque client encaissé.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">💰</div>
+<h3>Bénéfice net exact</h3>
+<p>Publicité, livraison, produit, call center, retours et frais cachés inclus automatiquement.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">📦</div>
+<h3>Taux de livraison intelligent</h3>
+<p>Détectez rapidement les campagnes toxiques avant qu’elles détruisent votre trésorerie.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🧠</div>
+<h3>Diagnostic automatique</h3>
+<p>Noki vous dit quoi scaler, quoi couper et quoi optimiser.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">⚡</div>
+<h3>Simulateur de rentabilité</h3>
+<p>Estimez votre marge réelle avant même de lancer une campagne.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">📱</div>
+<h3>Simple et rapide</h3>
+<p>Utilisable depuis téléphone, sans Excel compliqué et sans comptable.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- AFRICA -->
+<p class="hero-highlight">
+    <img src="img4.jpeg" alt="Noki Metrics" width="356" height="353" class="glow-image" style="display: block; margin-left: auto; margin-right: auto; width: auto; max-width: 100%; height: auto;">
+</p>
+
+<section>
+
+<div class="africa-box">
+
+<div class="section-head" style="margin-bottom:0;">
+
+<h2>
+Enfin un outil pensé pour le business africain.
+</h2>
+
+<p>
+Les outils classiques ne comprennent pas les réalités du Cash on Delivery africain.
+Noki oui.
+</p>
+
+</div>
+
+<div class="africa-tags">
+
+<div class="africa-tag">📞 Confirmations call center</div>
+<div class="africa-tag">↩️ Retours colis</div>
+<div class="africa-tag">💵 Paiement à la livraison</div>
+<div class="africa-tag">📉 Faux leads</div>
+<div class="africa-tag">💱 Devises africaines</div>
+<div class="africa-tag">📦 Taux de livraison</div>
+<div class="africa-tag">🚚 Réalité terrain</div>
+<div class="africa-tag">💰 Protection cashflow</div>
+
+</div>
+
+</div>
+
+</section>
+<p class="hero-highlight">
+    <img src="img3.jpeg" alt="Noki Metrics" width="356" height="353" class="glow-image" style="display: block; margin-left: auto; margin-right: auto; width: auto; max-width: 100%; height: auto;">
+</p>
+
+
+<!-- BEFORE AFTER -->
+
+<section>
+
+<div class="section-head">
+
+<h2>
+Avant Noki vs Après Noki
+</h2>
+
+<p>
+La différence entre scaler à l’aveugle… et piloter un business rentable.
+</p>
+
+</div>
+
+<div class="compare">
+
+<div class="compare-card before">
+
+<h3>
+🔴 Avant Noki
+</h3>
+
+<div class="compare-list">
+
+<div class="compare-item">❌ Vous regardez seulement Facebook Ads</div>
+<div class="compare-item">❌ Vous ne connaissez pas votre vrai bénéfice</div>
+<div class="compare-item">❌ Vous scalez à l’aveugle</div>
+<div class="compare-item">❌ Votre trésorerie devient instable</div>
+<div class="compare-item">❌ Les décisions sont émotionnelles</div>
+
+</div>
+
+</div>
+
+<div class="compare-card after">
+
+<h3>
+🟢 Après Noki
+</h3>
+
+<div class="compare-list">
+
+<div class="compare-item">✅ Rentabilité exacte campagne par campagne</div>
+<div class="compare-item">✅ Détection rapide des campagnes dangereuses</div>
+<div class="compare-item">✅ Scale intelligent basé sur les chiffres</div>
+<div class="compare-item">✅ Cashflow protégé</div>
+<div class="compare-item">✅ Décisions pilotées par la data</div>
+
+</div>
+
+</div>
+
+<!-- IMAGE ILLUSTRATIVE RÉSULTAT -->
+<div style="margin-top: 40px; text-align: center;">
+    <img src="img2.jpeg" alt="Résultats Noki" width="356" height="353" class="glow-image" style="display: inline-block;">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2>
+Arrêtez de scaler à l’aveugle.
+</h2>
+
+<p>
+Prenez enfin le contrôle de votre rentabilité COD
+et pilotez votre croissance avec des chiffres réels.
+</p>
+
+<a class="btn btn-primary" href="https://dmomxsez.mychariow.shop/nokimetric/checkout">
+🚀 Commencer avec Noki
+</a>
+
+<div class="footer-note">
+Optimisé pour Afrique • E-commerce • Cash on Delivery
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+<script>
+// ============================================
+// META PIXEL - TRACKING COMPLET
+// Version : Professionnelle
+// ============================================
+
+(function() {
+    'use strict';
+
+    // Attendre que le DOM soit chargé
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTracking);
+    } else {
+        initTracking();
+    }
+
+    function initTracking() {
+        console.log('🔵 Pixel Tracking Noki - Initialisé');
+
+        // ============================================
+        // 1. BOUTON PRINCIPAL : Commencer maintenant
+        // ============================================
+        const btnPrimary = document.querySelector('.btn-primary');
+        if (btnPrimary) {
+            btnPrimary.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Envoyer l'événement à Facebook
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Noki_Metric_Checkout',
+                    content_category: 'Paiement',
+                    content_ids: ['NOKI001'],
+                    content_type: 'product',
+                    value: 0,
+                    currency: 'USD',
+                    num_items: 1
+                });
+                
+                console.log('✅ [FB Pixel] InitiateCheckout - Bouton principal');
+                
+                // Option : attendre 50ms pour que le pixel envoie avant la redirection
+                if (href && href !== '#' && !href.startsWith('javascript:')) {
+                    e.preventDefault();
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 80);
+                }
+            });
+        }
+
+        // ============================================
+        // 2. BOUTON SECONDAIRE : Découvrir Noki
+        // ============================================
+        const btnSecondary = document.querySelector('.btn-secondary');
+        if (btnSecondary) {
+            btnSecondary.addEventListener('click', function() {
+                fbq('track', 'ViewContent', {
+                    content_name: 'Section_Features_Noki',
+                    content_category: 'Fonctionnalités',
+                    content_type: 'landing_section'
+                });
+                console.log('✅ [FB Pixel] ViewContent - Découvrir Noki');
+            });
+        }
+
+        // ============================================
+        // 3. CTA FINALE (section du bas)
+        // ============================================
+        const btnFinal = document.querySelector('.cta-box .btn-primary');
+        if (btnFinal && btnFinal !== btnPrimary) {
+            btnFinal.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Noki_Metric_Checkout_Final',
+                    content_category: 'Paiement_CTA_Finale',
+                    content_ids: ['NOKI001'],
+                    content_type: 'product',
+                    value: 0,
+                    currency: 'USD'
+                });
+                
+                console.log('✅ [FB Pixel] InitiateCheckout - CTA finale');
+                
+                if (href && href !== '#' && !href.startsWith('javascript:')) {
+                    e.preventDefault();
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 80);
+                }
+            });
+        }
+
+        // ============================================
+        // 4. TRACKING DES CLIQUES SUR TOUS LES LIENS EXTERNES
+        // ============================================
+        const allLinks = document.querySelectorAll('a[href^="https://"]');
+        allLinks.forEach(function(link) {
+            // Éviter les doublons avec les boutons déjà traités
+            if (link !== btnPrimary && link !== btnFinal) {
+                link.addEventListener('click', function(e) {
+                    fbq('track', 'Lead', {
+                        content_name: 'Lien_externe_' + (this.innerText.trim().substring(0, 30) || 'clic'),
+                        content_category: 'Navigation'
+                    });
+                    console.log('✅ [FB Pixel] Lead - Lien externe cliqué');
+                });
+            }
+        });
+
+        // ============================================
+        // 5. TEMPS PASSÉ SUR LA PAGE (Engagement)
+        // ============================================
+        let timeSpent = 0;
+        const timeInterval = setInterval(function() {
+            timeSpent += 10;
+            if (timeSpent === 30) {
+                // 30 secondes sur la page
+                fbq('track', 'TimeSpent', {
+                    content_name: '30_seconds_on_page',
+                    time_seconds: 30
+                });
+                console.log('✅ [FB Pixel] TimeSpent - 30 secondes');
+            } else if (timeSpent === 60) {
+                // 60 secondes sur la page
+                fbq('track', 'TimeSpent', {
+                    content_name: '60_seconds_on_page',
+                    time_seconds: 60
+                });
+                console.log('✅ [FB Pixel] TimeSpent - 60 secondes');
+                clearInterval(timeInterval);
+            }
+        }, 10000); // Vérifie toutes les 10 secondes
+
+        // ============================================
+        // 6. SCROLL PROFONDEUR (Engagement qualité)
+        // ============================================
+        let scrollTriggered25 = false;
+        let scrollTriggered50 = false;
+        let scrollTriggered75 = false;
+        let scrollTriggered90 = false;
+
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            
+            if (scrollPercent >= 25 && !scrollTriggered25) {
+                scrollTriggered25 = true;
+                fbq('track', 'ScrollDepth', {
+                    content_name: '25_percent_scroll',
+                    percent: 25
+                });
+                console.log('✅ [FB Pixel] ScrollDepth - 25%');
+            }
+            
+            if (scrollPercent >= 50 && !scrollTriggered50) {
+                scrollTriggered50 = true;
+                fbq('track', 'ScrollDepth', {
+                    content_name: '50_percent_scroll',
+                    percent: 50
+                });
+                console.log('✅ [FB Pixel] ScrollDepth - 50%');
+            }
+            
+            if (scrollPercent >= 75 && !scrollTriggered75) {
+                scrollTriggered75 = true;
+                fbq('track', 'ScrollDepth', {
+                    content_name: '75_percent_scroll',
+                    percent: 75
+                });
+                console.log('✅ [FB Pixel] ScrollDepth - 75%');
+            }
+            
+            if (scrollPercent >= 90 && !scrollTriggered90) {
+                scrollTriggered90 = true;
+                fbq('track', 'ScrollDepth', {
+                    content_name: '90_percent_scroll',
+                    percent: 90
+                });
+                console.log('✅ [FB Pixel] ScrollDepth - 90%');
+            }
+        });
+
+        // ============================================
+        // 7. TRACKING DES BOUTONS DANS LA SECTION PROBLÈMES
+        // ============================================
+        const problemCards = document.querySelectorAll('.problem-card');
+        problemCards.forEach(function(card, index) {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('h3')?.innerText || 'Problème ' + (index + 1);
+                fbq('track', 'Contact', {
+                    content_name: 'Problem_Card_Click',
+                    content_category: title
+                });
+                console.log('✅ [FB Pixel] Contact - Problème:', title);
+            });
+        });
+
+        // ============================================
+        // 8. TRACKING DES FEATURE CARDS
+        // ============================================
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(function(card, index) {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('h3')?.innerText || 'Fonctionnalité ' + (index + 1);
+                fbq('track', 'Search', {
+                    content_name: 'Feature_Click',
+                    content_category: title
+                });
+                console.log('✅ [FB Pixel] Search - Fonctionnalité:', title);
+            });
+        });
+
+        // ============================================
+        // 9. SCROLL TRACKING AMÉLIORÉ (section visible)
+        // ============================================
+        const sections = document.querySelectorAll('section');
+        const observedSections = new Set();
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !observedSections.has(entry.target)) {
+                    observedSections.add(entry.target);
+                    const sectionId = entry.target.id || 'section_' + Array.from(sections).indexOf(entry.target);
+                    const sectionTitle = entry.target.querySelector('h2')?.innerText?.substring(0, 50) || sectionId;
+                    
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Section_Viewed_' + sectionId,
+                        content_category: sectionTitle
+                    });
+                    console.log('✅ [FB Pixel] ViewContent - Section visible:', sectionTitle);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+
+        // ============================================
+        // 10. DÉTECTION DE L'INTENTION DE QUITTER
+        // ============================================
+        let exitIntentTriggered = false;
+        
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitIntentTriggered) {
+                exitIntentTriggered = true;
+                fbq('track', 'Lead', {
+                    content_name: 'Exit_Intent_Detected',
+                    content_category: 'Abandon'
+                });
+                console.log('✅ [FB Pixel] Lead - Exit intent détecté');
+            }
+        });
+
+        // ============================================
+        // RÉCAPITULATIF DANS LA CONSOLE
+        // ============================================
+        console.log('📊 [FB Pixel] Tracking complet activé :');
+        console.log('   - InitiateCheckout (boutons paiement)');
+        console.log('   - ViewContent (exploration)');
+        console.log('   - ScrollDepth (profondeur scroll)');
+        console.log('   - TimeSpent (temps passé)');
+        console.log('   - Lead (clics et exit intent)');
+        console.log('   - Search (fonctionnalités)');
+        console.log('   - Contact (problèmes)');
+    }
+
+})();
+</script>
+<script>
+// ============================================
+// CARROUSEL AUTOMATIQUE - 5 IMAGES
+// ============================================
+(function() {
+    const slides = document.querySelector('.carousel-slides');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    let autoInterval;
+    const totalSlides = 5;
+    const intervalTime = 4000; // 4 secondes
+
+    function updateCarousel() {
+        if (slides) {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function startAutoSlide() {
+        autoInterval = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopAutoSlide() {
+        if (autoInterval) {
+            clearInterval(autoInterval);
+        }
+    }
+
+    // Click sur les dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide();
+            currentIndex = index;
+            updateCarousel();
+            startAutoSlide();
+        });
+    });
+
+    // Pause au survol
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+        carouselContainer.addEventListener('mouseleave', startAutoSlide);
+        
+        // Support tactile mobile
+        carouselContainer.addEventListener('touchstart', stopAutoSlide);
+        carouselContainer.addEventListener('touchend', startAutoSlide);
+    }
+
+    // Démarrer le carrousel
+    startAutoSlide();
+
+    console.log('🖼️ Carrousel démarré - 5 images (4s/transition)');
+})();
+</script>
+</body>
+</html>
