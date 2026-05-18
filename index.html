@@ -660,7 +660,7 @@ Vous faites des ventes…<br>
 
 <p class="hero-sub">
 Noki est un outil de pilotage qui vous montre enfin la vérité derrière vos campagnes COD :
-CPA réel, bénéfice net, taux de livraison, pertes cachées, retours, logistique, gestion de stock, gestions de charges fixes et cashflow.
+CPA réel, bénéfice net, taux de livraison, pertes cachées, retours, logistique et cashflow.
 </p>
 
 <div class="carousel-container">
@@ -1216,7 +1216,8 @@ Optimisé pour Afrique • E-commerce • Cash on Delivery
         const problemCards = document.querySelectorAll('.problem-card');
         problemCards.forEach(function(card, index) {
             card.addEventListener('click', function() {
-                const title = this.querySelector('h3')?.innerText || 'Problème ' + (index + 1);
+                const h3Elem = this.querySelector('h3');
+                const title = h3Elem ? h3Elem.innerText : 'Problème ' + (index + 1);
                 fbq('track', 'Contact', {
                     content_name: 'Problem_Card_Click',
                     content_category: title
@@ -1231,7 +1232,8 @@ Optimisé pour Afrique • E-commerce • Cash on Delivery
         const featureCards = document.querySelectorAll('.feature-card');
         featureCards.forEach(function(card, index) {
             card.addEventListener('click', function() {
-                const title = this.querySelector('h3')?.innerText || 'Fonctionnalité ' + (index + 1);
+                const h3ElemFeature = this.querySelector('h3');
+                const title = h3ElemFeature ? h3ElemFeature.innerText : 'Fonctionnalité ' + (index + 1);
                 fbq('track', 'Search', {
                     content_name: 'Feature_Click',
                     content_category: title
@@ -1251,7 +1253,8 @@ Optimisé pour Afrique • E-commerce • Cash on Delivery
                 if (entry.isIntersecting && !observedSections.has(entry.target)) {
                     observedSections.add(entry.target);
                     const sectionId = entry.target.id || 'section_' + Array.from(sections).indexOf(entry.target);
-                    const sectionTitle = entry.target.querySelector('h2')?.innerText?.substring(0, 50) || sectionId;
+                    const h2Elem = entry.target.querySelector('h2');
+                    const sectionTitle = h2Elem ? h2Elem.innerText.substring(0, 50) : sectionId;
                     
                     fbq('track', 'ViewContent', {
                         content_name: 'Section_Viewed_' + sectionId,
